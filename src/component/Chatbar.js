@@ -58,7 +58,8 @@ export function Chatbar() {
         <Avatar src={`https://avatars.dicebear.com/api/male/huaman/123/.svg`} />
         <div className='chat-header-info' >
           <h3>{roomName}</h3>
-          <p>Last seen...</p>
+          {/* Last seen.. */}
+          <p>{new Date(message[message.length-1]?.timestamp?.seconds*1000).toLocaleTimeString()}</p>
         </div>
         <div className='chat-header-right-icons'>
           <IconButton>
@@ -88,11 +89,7 @@ export function Chatbar() {
        ))
         }
        
-        {/* <p className='chat-mssg ' >
-          <span className='chat-name'>OtherSide</span>
-          Hii this is test message!
-          <span className='chat-time'>10.30 AM</span>
-        </p> */}
+       
       </div>
 
       <div className='chat-footer'>
