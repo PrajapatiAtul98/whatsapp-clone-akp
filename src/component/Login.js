@@ -5,7 +5,7 @@ import { actionTypes } from './reudcer'
 import { useStateValue } from './StateProvider'
 
 function Login() {
-    const [dispatch] = useStateValue();
+    const [{user},dispatch] = useStateValue();
     const signIn = () => {
         auth.signInWithPopup(authProvider).then(result => {
             //console.log(result);
@@ -27,4 +27,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Login;

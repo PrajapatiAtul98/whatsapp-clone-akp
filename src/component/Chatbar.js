@@ -23,6 +23,7 @@ export function Chatbar() {
   const[roomName,setRoomName] = useState("")
   const [message,setMessage] = useState([]);
    const [{user}] = useStateValue();
+   
   useEffect(() => {
             if(roomId){
               db.collection("rooms").doc(roomId).onSnapshot((snapshot=>{
@@ -55,7 +56,7 @@ export function Chatbar() {
     <div className='chatbar'>
       <div className='chatbar-header'>
         <Avatar src={`https://avatars.dicebear.com/api/male/huaman/123/.svg`} />
-        <div className='chat-header-info'>
+        <div className='chat-header-info' >
           <h3>{roomName}</h3>
           <p>Last seen...</p>
         </div>
@@ -74,7 +75,7 @@ export function Chatbar() {
 
       <div className='chat-body' >
        { message.map(message =>(
-          <p className={`chat-mssg ${user.displayName === message.name && "chat-rcv"}`}>
+          <p className={`chat-mssg ${user.displayName === message.name && "chat-rcver"}`} >
           <span className='chat-name'>{message.name}</span>
                       {message.message}
           <span className='chat-time'>
@@ -87,11 +88,11 @@ export function Chatbar() {
        ))
         }
        
-        <p className='chat-mssg ' >
+        {/* <p className='chat-mssg ' >
           <span className='chat-name'>OtherSide</span>
           Hii this is test message!
           <span className='chat-time'>10.30 AM</span>
-        </p>
+        </p> */}
       </div>
 
       <div className='chat-footer'>

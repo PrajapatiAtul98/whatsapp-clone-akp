@@ -1,6 +1,4 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import { Counter } from '../features/counter/Counter';
 import './App.css';
 import { Sidebar } from './Sidebar';
 import { Chatbar } from './Chatbar';
@@ -18,7 +16,7 @@ import { actionTypes } from './reudcer';
 
 
 function App() {
-  const [{ user }, dispatch] = useStateValue();
+  const [{ user },dispatch] = useStateValue();
   console.log(user)
   useEffect(() => {
     auth.onAuthStateChanged(user => {
@@ -27,7 +25,7 @@ function App() {
         user: user
       })
     })
-  })
+  }, [])
   return (
     <BrowserRouter>
 
