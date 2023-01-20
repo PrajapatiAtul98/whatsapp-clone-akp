@@ -1,0 +1,106 @@
+.sidebar {
+    flex: 0.35;
+    background-color: rgb(220, 211, 211);
+}
+.sidebar-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-right: 1px solid rgba(121, 115, 112,.5);
+    padding: 10px;
+    background-color: #ededed;
+}
+.sidebar-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: green;
+}
+ .user-profile-name {
+   font-weight: bold;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    cursor: pointer;
+    color: green;
+}
+
+.sidebar-right-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 10vw;
+}
+.sidebar-right-header svg {
+    font-size: 19px;
+}
+.sidebar-search {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    height: 40px;
+    padding: 10px;
+}
+.sidebar-search-Container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 400px;
+    height:35px;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+.sidebar-search-Container input {
+    border: 0px;
+    margin-left: 30px;
+    outline: 0;
+    width: 100%;
+}
+.sidebar-chats {
+    display: flex;
+    flex-direction: column;
+    background-color:#fff;
+    background-color: #6bcb6e;
+}
+.sidebar-chat {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+    border-bottom: 1px solid rgba(48, 47, 47,0.5);
+    
+}
+
+.sidebar-chats :hover{
+    cursor: pointer;
+    background-color: #767c77;
+    text-decoration: none;
+    
+}
+.sidebar-chat-info{
+    margin-left: 15px;
+    color: black;
+    text-decoration: none;
+   
+}
+.sidebar-chat-info h2{
+    font-size: 18px;
+    /* text-decoration: none; */
+}
+.sidebar-chat-info p{
+    font-size: 12px;
+    
+}
+
+.sidebar-chat>h2 {
+   
+    font-size: 25px;
+    margin-left: 10px;
+    
+}
+.sidebar-chat .MuiAvatar-circular {
+    width: 30px;
+    height: 30px;
+}
