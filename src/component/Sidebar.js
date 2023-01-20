@@ -21,6 +21,10 @@ import { auth } from './firebase';
 export function Sidebar() {
   const [rooms, setRooms] = useState([]);
   const [{ user }] = useStateValue();
+
+  const [searchTerm, setSearchTerm] = useState('');
+
+
   useEffect(() => {
     db.collection("rooms").onSnapshot(snapshot => {
       setRooms(snapshot.docs.map(doc => ({
@@ -31,16 +35,21 @@ export function Sidebar() {
     })
   }, []);
 
- // console.log("photo", user.displayName)
+  // console.log("photo", user.displayName)
 
   function SignOutFn() {
     auth.signOut().then(() => {
-      alert("signOut successfully")
+      alert("signOut Successfully")
     }).catch((error) => {
-      // An error occurred. Handle errors here.
-      alert("signOut Error",error)
+
+      alert("signOut Error", error)
     });
   }
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  }
+
 
   return (
     <div className='sidebar'>
@@ -66,7 +75,7 @@ export function Sidebar() {
         </div>
 
       </div>
-      <div className='sidebar-search'>
+      {/* <div className='sidebar-search'>
         <div className='sidebar-search-Container'>
           <SearchIcon />
           <input type="text" placeholder='Search for chat' />
@@ -82,11 +91,36 @@ export function Sidebar() {
         }
 
 
+      </div> */}
+      <div className='sidebar-search'>
+        <div className='sidebar-search-Container'>
+          <SearchIcon />
+          <input type="text" placeholder='Search for chat' onChange={handleSearch} />
+        </div>
       </div>
 
+      <div className='sidebar-chats'>
+        <SidebarChat addnewchat />
+        {
+          rooms.map(room => {
+
+           console.log("room names:",room.data.name)
+
+            let chatClass = 'sidebar-chats';
+            if (room.data.name.toLowerCase() === searchTerm.toLowerCase()) {
+              chatClass += ' highlighted-chat';
+               console.log("chatClass:",chatClass)
+             console.log("searchTerm:",searchTerm)
+            }
+            return <SidebarChat key={room.id} id={room.id} name={room.data.name} className={chatClass} />
+          })
+        }
+      </div>
 
     </div>
   )
 }
+
+
 
 

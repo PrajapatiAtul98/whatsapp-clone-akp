@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
     border-right: 1px solid rgba(121, 115, 112,.5);
-    padding: 10px;
+    padding: 18px;
     background-color: #ededed;
 }
 .sidebar-header img {
@@ -52,6 +52,9 @@
     margin: 10px;
     padding-left: 10px;
     border-radius: 10px;
+   
+    
+    
 }
 .sidebar-search-Container input {
     border: 0px;
@@ -64,6 +67,10 @@
     flex-direction: column;
     background-color:#fff;
     background-color: #6bcb6e;
+    overflow: hidden;
+    overflow: scroll;
+       
+    
 }
 .sidebar-chat {
     display: flex;
@@ -71,6 +78,7 @@
     border-bottom: 1px solid lightgray;
     padding: 10px;
     border-bottom: 1px solid rgba(48, 47, 47,0.5);
+  
     
 }
 
@@ -84,6 +92,7 @@
     margin-left: 15px;
     color: black;
     text-decoration: none;
+  
    
 }
 .sidebar-chat-info h2{
@@ -104,4 +113,8 @@
 .sidebar-chat .MuiAvatar-circular {
     width: 30px;
     height: 30px;
+}
+.highlighted-chat{
+    color: crimson;
+    background-color: blueviolet;
 }
