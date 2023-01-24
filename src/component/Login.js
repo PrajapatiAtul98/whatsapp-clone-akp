@@ -8,7 +8,7 @@ function Login() {
     const [{user},dispatch] = useStateValue();
     const signIn = () => {
         auth.signInWithPopup(authProvider).then(result => {
-            //console.log(result);
+            
             dispatch({
                 type: actionTypes.SET_USER,
                 user: result.user

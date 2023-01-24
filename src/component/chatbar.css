@@ -8,6 +8,7 @@
     align-items: center;
     border-bottom: 1px solid rgba(121, 115, 112,.5);
     padding: 10px;
+    background-color: #f3f3f5;
 }
 .chat-header-info {
     flex: 1;
@@ -27,14 +28,15 @@
    font-size: 20px;
 }
 .chat-body {
-    background-color: rgba(79, 118, 67,0.5);
+    background-color: rgba(134, 12, 103, 0.5);
+    background-image: url("./bg-chat-img.png");
     flex: 1;
     padding: 25px 10px;
     overflow-y: auto;
 }
 .chat-body .chat-mssg {
      position: relative;
-     background-color:  rgb(175, 182, 176);
+     background-color:  rgb(124, 139, 126);
      padding: 10px;
      margin-bottom: 30px;
      border-radius: 10px;
@@ -55,28 +57,23 @@
 }
 
 .chat-body .chat-rcver{
-    background-color: rgba(55, 98, 63,0.8);
+    background-color: rgba(3, 191, 35, 0.8);
     margin-left: auto;
 }
 .chat-footer{
     display: flex;
     align-items: center;
     padding: 10px;
+    background-color:  #f3f3f5;
 
 }
 .chat-footer svg {
-   
     padding: 10px;
     color: gray;
-   
-
 } 
 .chat-footer svg :hover{
-   
-   
     cursor: pointer;
     color: green;
-
 } 
 .chat-footer form {
     flex: 1;
@@ -89,4 +86,65 @@
 }
 .chat-footer form input[type=submit] {
    display: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    
+    .chatbar-header {
+           padding: 5px;
+    }
+    .chat-header-info {
+       
+        padding: 5px;
+    }
+    .chat-header-info h3{
+        font-size: 10px;
+    }
+    .chat-header-info p{
+        font-size: 8px;
+    }
+    .chat-header-right-icons svg{
+       font-size: 10px;
+    }
+    .chat-body {
+        padding: 20px 5px;
+    }
+    .chat-body .chat-mssg {
+        
+         padding: 5px;
+         margin-bottom: 15px;
+         border-radius: 5px;
+         
+    }
+     .chat-name {
+        font-size: 8px;
+        
+    }
+    
+    .chat-time {
+        font-size: 6px;
+        margin-left: 10px;
+        
+  }
+  .chat-footer{
+    padding: 5px;
+
+}
+.chat-footer svg {
+    padding: 5px;
+   
+} 
+
+
+.chat-footer form input[type=text] {
+    border: 0;
+    height: 20px;
+    outline: 0;
+    width: 100%;
+}
+
+
 }

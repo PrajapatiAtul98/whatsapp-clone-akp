@@ -1,7 +1,5 @@
-
 import React from 'react'
 import IconButton from '@mui/material/IconButton';
-
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 import ChatIcon from '@mui/icons-material/Chat';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -12,19 +10,14 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import db from './firebase';
 import { useStateValue } from './StateProvider';
-//import firebase from 'firebase/compat/app';
 import { auth } from './firebase';
+// import { SearchBar } from './SearchBar';
 
-
-
-
-export function Sidebar() {
+export function Sidebar(Room) {
   const [rooms, setRooms] = useState([]);
   const [{ user }] = useStateValue();
-
-  const [searchTerm, setSearchTerm] = useState('');
-
-
+  const [searchText, setSearchText] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
   useEffect(() => {
     db.collection("rooms").onSnapshot(snapshot => {
       setRooms(snapshot.docs.map(doc => ({
@@ -35,22 +28,34 @@ export function Sidebar() {
     })
   }, []);
 
-  // console.log("photo", user.displayName)
+
 
   function SignOutFn() {
     auth.signOut().then(() => {
-      alert("signOut Successfully")
-    }).catch((error) => {
-
-      alert("signOut Error", error)
-    });
-  }
-
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
+      alert("Sign-Out Successfully")
+    })
+      .catch((error) => {
+        alert("Sign-Out", error)
+      });
   }
 
 
+
+  const handleSearch = async () => {
+    const roomsRef = db.collection("rooms");
+    const querySnapshot = await roomsRef
+      .where("name", ">=", searchText.toLowerCase())
+      .get();
+    const searchResults = querySnapshot.docs.map((doc) => doc.data());
+    setSearchResults(searchResults);
+  };
+
+  const handleKey = (e) => {
+    if (e.code === "Enter") {
+      handleSearch();
+    }
+  };
+  const filteredRooms = rooms.filter(room => room.data.name.includes(searchText))
   return (
     <div className='sidebar'>
       <div className='sidebar-header'>
@@ -69,57 +74,58 @@ export function Sidebar() {
           <IconButton>
             <MoreVertIcon />
           </IconButton>
-
-
-
         </div>
-
       </div>
+
+      {/* <SearchBar/> */}
+
       {/* <div className='sidebar-search'>
         <div className='sidebar-search-Container'>
           <SearchIcon />
           <input type="text" placeholder='Search for chat' />
         </div>
-
-      </div>
-      <div className='sidebar-chats'>
-        <SidebarChat addnewchat />
-        {
-          rooms.map(room => {
-            return <SidebarChat key={room.id} id={room.id} name={room.data.name} />
-          })
-        }
-
-
       </div> */}
       <div className='sidebar-search'>
         <div className='sidebar-search-Container'>
           <SearchIcon />
-          <input type="text" placeholder='Search for chat' onChange={handleSearch} />
+          <input
+            type="text"
+            placeholder='Search for chat'
+            value={searchText}
+            onChange={e => setSearchText(e.target.value)}
+            onKeyDown={handleKey}
+          />
+        
         </div>
+       
+
       </div>
+
+
 
       <div className='sidebar-chats'>
         <SidebarChat addnewchat />
         {
-          rooms.map(room => {
-
-           console.log("room names:",room.data.name)
-
-            let chatClass = 'sidebar-chats';
-            if (room.data.name.toLowerCase() === searchTerm.toLowerCase()) {
-              chatClass += ' highlighted-chat';
-               console.log("chatClass:",chatClass)
-             console.log("searchTerm:",searchTerm)
-            }
-            return <SidebarChat key={room.id} id={room.id} name={room.data.name} className={chatClass} />
+          filteredRooms.map(room => {
+            return <SidebarChat key={room.id} id={room.id} name={room.data.name} />
           })
         }
       </div>
-
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

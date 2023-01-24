@@ -12,12 +12,9 @@ import { useEffect } from 'react';
 import { actionTypes } from './reudcer';
 
 
-
-
-
 function App() {
   const [{ user },dispatch] = useStateValue();
-  console.log(user)
+  //console.log(user)
   useEffect(() => {
     auth.onAuthStateChanged(user => {
       dispatch({
