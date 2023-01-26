@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 import db from './firebase';
 import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
-// import { SearchBar } from './SearchBar';
+
 
 export function Sidebar(Room) {
   const [rooms, setRooms] = useState([]);
@@ -77,14 +77,7 @@ export function Sidebar(Room) {
         </div>
       </div>
 
-      {/* <SearchBar/> */}
-
-      {/* <div className='sidebar-search'>
-        <div className='sidebar-search-Container'>
-          <SearchIcon />
-          <input type="text" placeholder='Search for chat' />
-        </div>
-      </div> */}
+     
       <div className='sidebar-search'>
         <div className='sidebar-search-Container'>
           <SearchIcon />
