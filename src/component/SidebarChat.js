@@ -10,14 +10,27 @@ export function SidebarChat({ id, name, addnewchat }) {
     const [number, setNumber] = useState("");
     const [lastMessage,setLastMessage] = useState("");
 
+    // useEffect(() => {
+        
+    //     setNumber(Math.floor(Math.random() * 5000))
+    //     db.collection("rooms").doc(id).collection("message").orderBy("timestamp","desc")
+    //     .onSnapshot((snapshot)=>setLastMessage(snapshot.docs.map(doc=>doc.data())))
+       
+    // }, [])
     useEffect(() => {
         
         setNumber(Math.floor(Math.random() * 5000))
         db.collection("rooms").doc(id).collection("message").orderBy("timestamp","desc")
-        .onSnapshot((snapshot)=>setLastMessage(snapshot.docs.map(doc=>doc.data())))
-       
+        .onSnapshot((snapshot)=>{
+            const messages = snapshot.docs.map(doc=>doc.data());
+            messages.sort((a, b) => b.timestamp - a.timestamp);
+            setLastMessage(messages);
+        });
+           
     }, [])
-   // console.log(lastMessage)
+    
+
+    console.log("lastMessage",lastMessage)
     
     const addNewRoom = () => {
         const room = prompt("Enter the Room Name");
@@ -33,7 +46,7 @@ export function SidebarChat({ id, name, addnewchat }) {
     return (
 
         !addnewchat ? (
-
+       
             <Link to={`/room/${id}`} style={{ textDecoration: "none" }} >
                 <div className='sidebar-chat'>
                     <Avatar src={`https://avatars.dicebear.com/api/male/huaman/${number}/.svg`} />
@@ -48,8 +61,6 @@ export function SidebarChat({ id, name, addnewchat }) {
                 <h2>Add New Room</h2>
             </div>
         )
-
-
     )
 }
 
