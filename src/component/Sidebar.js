@@ -21,15 +21,20 @@ export function Sidebar(Room) {
   useEffect(() => {
     db.collection("rooms").onSnapshot((snapshot) => {
       console.log("snapshot", snapshot.docs);
+      
       setRooms(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          data: doc.data(),
-        }))
+        snapshot.docs
+          .map((doc) => ({
+            id: doc.id,
+            data: doc.data(),
+          }))
+          .sort((a, b) => {
+            return b.data.lastMessageSent - a.data.lastMessageSent;
+          })
       );
     });
   }, []);
-
+  console.log("rooms", rooms);
   function SignOutFn() {
     auth
       .signOut()
