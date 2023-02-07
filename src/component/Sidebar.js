@@ -40,20 +40,23 @@ export function Sidebar(Room) {
         alert("Sign-Out", error);
       });
   }
+  
   // const handleSearch = async () => {
   //   const roomsRef = db.collection("rooms");
   //   const querySnapshot = await roomsRef
   //     .where("name", ">=", searchText.toLowerCase())
-  //     .get();
+  //     // .get();
   //   const searchResults = querySnapshot.docs.map((doc) => doc.data());
   //   setSearchResults(searchResults);
   // };
 
- 
+  
   
   const filteredRooms = rooms.filter((room) =>
-    room.data.name.toLowerCase().includes(searchText.toLowerCase())
-  );
+  room.data.name && room.data.name.toLowerCase().includes(searchText.toLowerCase())
+);
+
+ 
   return (
     <div className="sidebar">
       <div className="sidebar-header">
