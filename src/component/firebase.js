@@ -3,14 +3,23 @@ import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
 
+// const firebaseConfig = {
+//   apiKey: "AIzaSyB2kYnPPtojrp-ub3SwMcAs7VKnBbrAIJs",
+//   authDomain: "whatsapp-clone-chatapp-d62c3.firebaseapp.com",
+//   projectId: "whatsapp-clone-chatapp-d62c3",
+//   storageBucket: "whatsapp-clone-chatapp-d62c3.appspot.com",
+//   messagingSenderId: "1028303060284",
+//   appId: "1:1028303060284:web:b3822f29e72b94b3a3b239",
+//   measurementId: "G-1Y2Y3E6TSX"
+// };
 const firebaseConfig = {
-  apiKey: "AIzaSyB2kYnPPtojrp-ub3SwMcAs7VKnBbrAIJs",
-  authDomain: "whatsapp-clone-chatapp-d62c3.firebaseapp.com",
-  projectId: "whatsapp-clone-chatapp-d62c3",
-  storageBucket: "whatsapp-clone-chatapp-d62c3.appspot.com",
-  messagingSenderId: "1028303060284",
-  appId: "1:1028303060284:web:b3822f29e72b94b3a3b239",
-  measurementId: "G-1Y2Y3E6TSX"
+  apiKey: "AIzaSyA9AMtSiw9ZKSJgByvI4vghyv-Hbka5TnE",
+  authDomain: "whatspp-chat.firebaseapp.com",
+  projectId: "whatspp-chat",
+  storageBucket: "whatspp-chat.appspot.com",
+  messagingSenderId: "239697615263",
+  appId: "1:239697615263:web:35041d7493b40f4ab485aa",
+  measurementId: "G-QE50BD2VVM"
 };
 // const firebaseConfig = {
 //   apiKey: "AIzaSyAx-CXwjko0ZgkJwmMD0IBMnNrQo_CNXH0",
