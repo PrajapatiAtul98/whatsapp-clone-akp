@@ -4,6 +4,7 @@ import "./login.css"
 import { actionTypes } from './reudcer'
 import { useStateValue } from './StateProvider'
 
+
 function Login() {
     const [{user},dispatch] = useStateValue();
     const signIn = () => {
@@ -20,7 +21,7 @@ function Login() {
             <div className='login'>
                 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png' alt='wtsasp-logo' />
                 <h2>😎 Welcome to AP's whatsapp 😎</h2>
-                <button onClick={signIn}>👉🏻 Login with Gmail</button>
+                <button onClick={signIn}>👉🏻 Login with Google  </button>
             </div>
 
         </div>

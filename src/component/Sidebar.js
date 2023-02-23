@@ -3,6 +3,7 @@ import IconButton from "@mui/material/IconButton";
 import DonutLargeIcon from "@mui/icons-material/DonutLarge";
 import ChatIcon from "@mui/icons-material/Chat";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import LogoutIcon from '@mui/icons-material/Logout';
 import SearchIcon from "@mui/icons-material/Search";
 import "./sidebar.css";
 import { SidebarChat } from "./SidebarChat";
@@ -65,7 +66,7 @@ export function Sidebar(Room) {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <img src={user.photoURL} alt="userPhoto" onClick={SignOutFn} />
+        <img src={user.photoURL} alt="userPhoto"  />
         <span className="user-profile-name">{user.displayName}</span>
         <div className="sidebar-right-header">
           <IconButton>
@@ -77,7 +78,7 @@ export function Sidebar(Room) {
           </IconButton>
 
           <IconButton>
-            <MoreVertIcon />
+            <LogoutIcon style={{color:"red"}} onClick={SignOutFn} />
           </IconButton>
         </div>
       </div>

@@ -17,7 +17,7 @@ import { useStateValue } from "./StateProvider";
 
 export function Chatbar() {
   const { roomId } = useParams(); //there will be a no. of params but i want only roomId so deStructure it
-  // console.log(roomId);
+  
   const [roomName, setRoomName] = useState("");
   const [message, setMessage] = useState([]);
   const [{ user }] = useStateValue();
