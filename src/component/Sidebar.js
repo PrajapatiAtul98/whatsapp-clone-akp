@@ -36,6 +36,7 @@ export function Sidebar(Room) {
     });
   }, []);
   console.log("rooms", rooms);
+  
   function SignOutFn() {
     auth
       .signOut()
