@@ -5,15 +5,14 @@ import "firebase/compat/firestore";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA9AMtSiw9ZKSJgByvI4vghyv-Hbka5TnE",
-  authDomain: "whatspp-chat.firebaseapp.com",
-  projectId: "whatspp-chat",
-  storageBucket: "whatspp-chat.appspot.com",
-  messagingSenderId: "239697615263",
-  appId: "1:239697615263:web:35041d7493b40f4ab485aa",
-  measurementId: "G-QE50BD2VVM"
+  apiKey: "AIzaSyCfvr4ZwG3REXxyENaU-06In5FBffFd4Y4",
+  authDomain: "mychatapp-8b23b.firebaseapp.com",
+  projectId: "mychatapp-8b23b",
+  storageBucket: "mychatapp-8b23b.appspot.com",
+  messagingSenderId: "615754854273",
+  appId: "1:615754854273:web:8c7b9cebe2fcfa7a2b4280",
+  measurementId: "G-VL1K5387YQ"
 };
-
 //this will connect everything
 const firebaseApp = firebase.initializeApp(firebaseConfig); 
 
