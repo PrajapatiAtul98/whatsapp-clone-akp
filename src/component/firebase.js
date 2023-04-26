@@ -10,15 +10,7 @@ const firebaseConfig = {
   appId: "1:220019087977:web:e0909a1357013fea28e0f8",
   measurementId: "G-F2XNYWRZ3Q"
 };
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCfvr4ZwG3REXxyENaU-06In5FBffFd4Y4",
-//   authDomain: "mychatapp-8b23b.firebaseapp.com",
-//   projectId: "mychatapp-8b23b",
-//   storageBucket: "mychatapp-8b23b.appspot.com",
-//   messagingSenderId: "615754854273",
-//   appId: "1:615754854273:web:8c7b9cebe2fcfa7a2b4280",
-//   measurementId: "G-VL1K5387YQ"
-// };
+
 //this will connect everything
 const firebaseApp = firebase.initializeApp(firebaseConfig); 
 
