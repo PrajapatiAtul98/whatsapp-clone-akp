@@ -20,6 +20,7 @@ export function Sidebar(Room) {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
+    
     db.collection("rooms").onSnapshot((snapshot) => {
       console.log("snapshot", snapshot.docs);
       
@@ -47,6 +48,7 @@ export function Sidebar(Room) {
         alert("Sign-Out", error);
       });
   }
+  console.log("user:"+ user);
   
   // const handleSearch = async () => {
   //   const roomsRef = db.collection("rooms");

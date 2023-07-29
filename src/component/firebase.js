@@ -20,14 +20,25 @@ import "firebase/compat/firestore";
 //   appId: "1:524167696040:web:50087c81ca7f8e3a373c9d",
 //   measurementId: "G-4V3VT1NTJH"
 // };
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCVim5JDBp4TqZg3kbd3QeQpRxnaxd2WO8",
+//   authDomain: "myapp-bdeb6.firebaseapp.com",
+//   projectId: "myapp-bdeb6",
+//   storageBucket: "myapp-bdeb6.appspot.com",
+//   messagingSenderId: "215820442854",
+//   appId: "1:215820442854:web:65fe3fbf9175ff1577ef27",
+//   measurementId: "G-DSREXVB8MZ"
+// };
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCVim5JDBp4TqZg3kbd3QeQpRxnaxd2WO8",
-  authDomain: "myapp-bdeb6.firebaseapp.com",
-  projectId: "myapp-bdeb6",
-  storageBucket: "myapp-bdeb6.appspot.com",
-  messagingSenderId: "215820442854",
-  appId: "1:215820442854:web:65fe3fbf9175ff1577ef27",
-  measurementId: "G-DSREXVB8MZ"
+  apiKey: "AIzaSyDmu6dohh-7vhYCC_B02S4eBuULAzWqTfE",
+  authDomain: "mywhatsapp-7a16f.firebaseapp.com",
+  projectId: "mywhatsapp-7a16f",
+  storageBucket: "mywhatsapp-7a16f.appspot.com",
+  messagingSenderId: "524167696040",
+  appId: "1:524167696040:web:50087c81ca7f8e3a373c9d",
+  measurementId: "G-4V3VT1NTJH"
 };
 
 //this will connect everything
