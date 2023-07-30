@@ -1,44 +1,15 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
-// const firebaseConfig = {
-//   apiKey: "AIzaSyATicdj53UKQxLU8Hy5Gy2YozxVY-xwfmA",
-//   authDomain: "chat-app-e6fa7.firebaseapp.com",
-//   projectId: "chat-app-e6fa7",
-//   storageBucket: "chat-app-e6fa7.appspot.com",
-//   messagingSenderId: "220019087977",
-//   appId: "1:220019087977:web:e0909a1357013fea28e0f8",
-//   measurementId: "G-F2XNYWRZ3Q"
-// };
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDmu6dohh-7vhYCC_B02S4eBuULAzWqTfE",
-//   authDomain: "mywhatsapp-7a16f.firebaseapp.com",
-//   projectId: "mywhatsapp-7a16f",
-//   storageBucket: "mywhatsapp-7a16f.appspot.com",
-//   messagingSenderId: "524167696040",
-//   appId: "1:524167696040:web:50087c81ca7f8e3a373c9d",
-//   measurementId: "G-4V3VT1NTJH"
-// };
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCVim5JDBp4TqZg3kbd3QeQpRxnaxd2WO8",
-//   authDomain: "myapp-bdeb6.firebaseapp.com",
-//   projectId: "myapp-bdeb6",
-//   storageBucket: "myapp-bdeb6.appspot.com",
-//   messagingSenderId: "215820442854",
-//   appId: "1:215820442854:web:65fe3fbf9175ff1577ef27",
-//   measurementId: "G-DSREXVB8MZ"
-// };
-
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDmu6dohh-7vhYCC_B02S4eBuULAzWqTfE",
-  authDomain: "mywhatsapp-7a16f.firebaseapp.com",
-  projectId: "mywhatsapp-7a16f",
-  storageBucket: "mywhatsapp-7a16f.appspot.com",
-  messagingSenderId: "524167696040",
-  appId: "1:524167696040:web:50087c81ca7f8e3a373c9d",
-  measurementId: "G-4V3VT1NTJH"
+  apiKey: "AIzaSyDvNv7NZOPCYbrYhBAKrXmi7m6Kbo0GAkg",
+  authDomain: "mywhatsapp-8b47e.firebaseapp.com",
+  projectId: "mywhatsapp-8b47e",
+  storageBucket: "mywhatsapp-8b47e.appspot.com",
+  messagingSenderId: "1093875339718",
+  appId: "1:1093875339718:web:eb3088edc9e55546c462c7",
+  measurementId: "G-Z6M7FS1GYV"
 };
 
 //this will connect everything
