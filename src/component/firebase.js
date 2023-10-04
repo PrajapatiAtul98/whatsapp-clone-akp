@@ -2,15 +2,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDvNv7NZOPCYbrYhBAKrXmi7m6Kbo0GAkg",
-//   authDomain: "mywhatsapp-8b47e.firebaseapp.com",
-//   projectId: "mywhatsapp-8b47e",
-//   storageBucket: "mywhatsapp-8b47e.appspot.com",
-//   messagingSenderId: "1093875339718",
-//   appId: "1:1093875339718:web:eb3088edc9e55546c462c7",
-//   measurementId: "G-Z6M7FS1GYV"
-// };
+
 const firebaseConfig = {
   apiKey: "AIzaSyAajq08xdQYYoLLb0Pd-bIg2LY0SBWY_kA",
   authDomain: "whatsssappp-50965.firebaseapp.com",
